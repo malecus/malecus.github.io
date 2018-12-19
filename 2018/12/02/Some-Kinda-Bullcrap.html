@@ -36,13 +36,41 @@
 </head>
 
 <body>
-  <div class="fixed">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+
+  <a href="#">Home</a>
+  <a href="#">Maps</a>
+  <a href="#">Blog</a>
+  <a href="#">GitHub</a>
+</div>
+
+<span style="position:fixed;margin-left:24px;margin-top:24px;cursor:pointer;color:white;" onclick="openNav()">
+  <div class="hamburger"></div>
+  <div class="hamburger"></div>
+  <div class="hamburger"></div>
+</span>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+</script>
+  
+
+<!-- <div class="fixed">
   <div class="hamburger-position">
     <div class="hamburger"></div>
     <div class="hamburger"></div>
     <div class="hamburger"></div>
   </div>
-</div>
+</div> -->
 
 <!-- <div class="fixed">
   <div class="header fixed shadow"></div>
@@ -54,16 +82,17 @@
   <img src="/assets/img/avatar.png" alt="avatar" class="avatar shadow">
 </div> -->
 
+  <div id="main">
   <div class="header-background-container shadow">
-  <div class="title-container center">
-    <h1 class="post-title text-shadow">Some Kinda Bullcrap</h1>
-    <h2 class="post-subtitle text-shadow">02 Dec 2018 // by Malecus</h2>
+    <div class="title-container center">
+      <h1 class="post-title text-shadow">Some Kinda Bullcrap</h1>
+      <h2 class="post-subtitle text-shadow">02 Dec 2018 // by Malecus</h2>
+    </div>
   </div>
-</div>
 
-<div class="center">
-  <div class="content-container shadow">
-    <h1 id="introduction">Introduction</h1>
+  <div class="center">
+    <div class="content-container shadow">
+      <h1 id="introduction">Introduction</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Molestie nunc non blandit massa. Natoque penatibus et magnis dis parturient montes. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Velit ut tortor pretium viverra suspendisse. Tortor pretium viverra suspendisse potenti nullam. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Vestibulum rhoncus est pellentesque elit. Varius morbi enim nunc faucibus.</p>
 
@@ -93,6 +122,7 @@
 
 <p>Nec dui nunc mattis enim ut tellus elementum sagittis. Faucibus et molestie ac feugiat sed lectus vestibulum. Nunc sed blandit libero volutpat. Elit pellentesque habitant morbi tristique senectus et netus. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Mauris pharetra et ultrices neque ornare. Diam sit amet nisl suscipit adipiscing bibendum est ultricies. Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Turpis egestas integer eget aliquet nibh praesent. Tellus cras adipiscing enim eu turpis egestas pretium.</p>
 
+    </div>
   </div>
 </div>
 

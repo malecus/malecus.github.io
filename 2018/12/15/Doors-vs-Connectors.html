@@ -36,13 +36,41 @@
 </head>
 
 <body>
-  <div class="fixed">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+
+  <a href="#">Home</a>
+  <a href="#">Maps</a>
+  <a href="#">Blog</a>
+  <a href="#">GitHub</a>
+</div>
+
+<span style="position:fixed;margin-left:24px;margin-top:24px;cursor:pointer;color:white;" onclick="openNav()">
+  <div class="hamburger"></div>
+  <div class="hamburger"></div>
+  <div class="hamburger"></div>
+</span>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+</script>
+  
+
+<!-- <div class="fixed">
   <div class="hamburger-position">
     <div class="hamburger"></div>
     <div class="hamburger"></div>
     <div class="hamburger"></div>
   </div>
-</div>
+</div> -->
 
 <!-- <div class="fixed">
   <div class="header fixed shadow"></div>
@@ -54,16 +82,17 @@
   <img src="/assets/img/avatar.png" alt="avatar" class="avatar shadow">
 </div> -->
 
+  <div id="main">
   <div class="header-background-container shadow">
-  <div class="title-container center">
-    <h1 class="post-title text-shadow">Doors Vs Connectors</h1>
-    <h2 class="post-subtitle text-shadow">15 Dec 2018 // by Malecus</h2>
+    <div class="title-container center">
+      <h1 class="post-title text-shadow">Doors Vs Connectors</h1>
+      <h2 class="post-subtitle text-shadow">15 Dec 2018 // by Malecus</h2>
+    </div>
   </div>
-</div>
 
-<div class="center">
-  <div class="content-container shadow">
-    <p>In every jump map, the <em>jumps</em> are the most important component–this is probably obvious. But there are lots of other components that go into good maps, one of which is <em>how the jumps are linked together</em>, and that’s what we’re talking about today.</p>
+  <div class="center">
+    <div class="content-container shadow">
+      <p>In every jump map, the <em>jumps</em> are the most important component–this is probably obvious. But there are lots of other components that go into good maps, one of which is <em>how the jumps are linked together</em>, and that’s what we’re talking about today.</p>
 
 <h1 id="a-plan">A Plan</h1>
 
@@ -88,6 +117,7 @@
 <h1 id="doors-are-easier-to-build">Doors are easier to build</h1>
 
 
+    </div>
   </div>
 </div>
 

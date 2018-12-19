@@ -16,6 +16,39 @@ body {
   background-color: #EEE;
   color: #000; }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #28517A;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s; }
+
+.sidenav a:hover {
+  color: #f1f1f1; }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px; }
+
+#main {
+  transition: margin-left .5s; }
+
 img {
   max-width: 100%;
   max-height: 100%; }
@@ -113,12 +146,10 @@ h1:not(.post-title) {
   padding-bottom: 12px;
   border-bottom: 1px solid #28517A; }
 
-.hamburger-position {
-  margin: 24px 24px; }
-
 .hamburger {
-  width: 30px;
-  height: 3px;
+  border-radius: 3px;
+  width: 34px;
+  height: 4px;
   background-color: #FFF;
   margin: 8px 0; }
 
