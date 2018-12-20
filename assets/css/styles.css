@@ -18,15 +18,16 @@ body {
 
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #28517A;
   overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px; }
+  transition: 0.3s ease;
+  padding: 60px 0 0 0;
+  margin: 0 0 0 -250px; }
 
 .sidenav a {
   padding: 8px 8px 8px 32px;
@@ -55,11 +56,11 @@ img {
 
 blockquote {
   margin: 0;
-  padding-left: 16px;
+  padding-left: 20px;
   padding-right: 16px;
   padding-top: 4px;
   padding-bottom: 4px;
-  background-color: #DDD;
+  background-color: #DDEEFF;
   border-left: 5px solid #28517A;
   font-size: 1.1rem; }
 
@@ -146,9 +147,31 @@ h1:not(.post-title) {
   padding-bottom: 12px;
   border-bottom: 1px solid #28517A; }
 
-.hamburger {
+#hamburger-button {
+  z-index: 2;
+  position: fixed;
+  margin-left: 24px;
+  margin-top: 24px;
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.25s ease; }
+
+#hamburger-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+#hamburger-container {
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  transform: translateY(43%); }
+
+#hamburger-container .hamburger {
   border-radius: 3px;
-  width: 34px;
+  margin: 0 auto;
+  width: 100%;
   height: 4px;
   background-color: #FFF;
   margin: 8px 0; }

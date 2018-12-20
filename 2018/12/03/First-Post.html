@@ -36,31 +36,42 @@
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-
-  <a href="#">Home</a>
-  <a href="#">Maps</a>
-  <a href="#">Blog</a>
-  <a href="#">GitHub</a>
+  <div id="nav" class="sidenav">
+  <ul>
+    <a href="#"><li>Home</li></a>
+    <a href="#"><li>Maps</li></a>
+    <a href="#"><li>Blog</li></a>
+    <a href="#"><li>GitHub</li></a>
+  </ul>
 </div>
 
-<span style="position:fixed;margin-left:24px;margin-top:24px;cursor:pointer;color:white;" onclick="openNav()">
-  <div class="hamburger"></div>
-  <div class="hamburger"></div>
-  <div class="hamburger"></div>
-</span>
+<div id="hamburger-button" onclick="toggleNav()">
+  <div id="hamburger-container">
+    <div class="hamburger"></div>
+    <div class="hamburger"></div>
+    <div class="hamburger"></div>
+  </div>
+</div>
 
 <script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+
+window.onscroll = function() {
+  var headerThing = document.getElementById("header-thing");
+
+  if (window.pageYOffset >= 350) {
+    //headerThing.classList.add("fixed")
+  } else {
+    //headerThing.classList.remove("fixed");
   }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-  }
+};
+
+var isOpen = false;
+
+function toggleNav() {
+  document.getElementById("nav").style.marginLeft = isOpen ? "-250px" : "0px";
+  isOpen = !isOpen;
+}
+
 </script>
   
 
@@ -83,7 +94,7 @@
 </div> -->
 
   <div id="main">
-  <div class="header-background-container shadow">
+  <div id="header-thing" class="header-background-container shadow">
     <div class="title-container center">
       <h1 class="post-title text-shadow">First Post</h1>
       <h2 class="post-subtitle text-shadow">03 Dec 2018 // by This guy</h2>
