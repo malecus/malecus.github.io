@@ -150,8 +150,8 @@ h1:not(.post-title) {
 #hamburger-button {
   z-index: 2;
   position: fixed;
-  margin-left: 24px;
-  margin-top: 24px;
+  margin-left: 14px;
+  margin-top: 14px;
   cursor: pointer;
   width: 75px;
   height: 75px;
@@ -175,6 +175,14 @@ h1:not(.post-title) {
   height: 4px;
   background-color: #FFF;
   margin: 8px 0; }
+
+#nav ul {
+  margin-top: 60px;
+  list-style-type: none;
+  padding: 0; }
+  #nav ul a:hover {
+    color: #28517A;
+    background-color: white; }
 
 .material-icons.md-light {
   color: #EEE;
